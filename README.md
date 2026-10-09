@@ -10,6 +10,7 @@ hazard-index safety metric · sensor-based detection (CUSUM) · replacement poli
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
 [![CI](https://github.com/meelad-sultan/circular-greenhouse-water-nexus/actions/workflows/ci.yml/badge.svg)](https://github.com/meelad-sultan/circular-greenhouse-water-nexus/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/1411337512.svg)](https://doi.org/10.5281/zenodo.23262174)
 
 </div>
 
@@ -442,7 +443,8 @@ flowchart TD
 
 ## 18. Citation, licence, references
 
-**Cite as** (see `CITATION.cff`): Sultan, M. M. (2026). *circular-greenhouse-water-nexus: multi-contaminant treatment and reuse in a circular greenhouse* (v0.1.0). GitHub repository.
+**Cite as** (see `CITATION.cff`): Sultan, M. M. (2026). *circular-greenhouse-water-nexus: multi-contaminant treatment and reuse in a circular greenhouse* (v0.1.0). DOI: [10.5281/zenodo.23262174](https://doi.org/10.5281/zenodo.23262174).
+
 **Licence:** MIT (see `LICENSE`).
 
 **Author:** Muhammad Meelad Sultan · GitHub: [@meelad-sultan](https://github.com/meelad-sultan) · 
