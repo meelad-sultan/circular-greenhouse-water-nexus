@@ -1,0 +1,387 @@
+{
+  "cgwn_version": "0.1.0",
+  "config_path": "configs/default.yaml",
+  "config": {
+    "seed": 20261008,
+    "horizon_days": 365,
+    "site": {
+      "latitude": 52.0,
+      "transmissivity": 0.65,
+      "t_min_inside": 16.0,
+      "t_max_inside": 27.0,
+      "rh_inside": 0.75
+    },
+    "crop": {
+      "area_m2": 2000,
+      "f_rad": 0.6,
+      "c_vpd": 0.05,
+      "crop_min": 0.3,
+      "ramp_days": 90,
+      "end_doy": 300,
+      "crop_final": 0.5
+    },
+    "loop": {
+      "volume_m3": 30.0,
+      "bleed_ratio": 0.25
+    },
+    "tank": {
+      "max_m3": 40.0,
+      "start_frac": 0.5,
+      "intake_on_frac": 0.8,
+      "q_src_max": 0.6,
+      "q_cap": 0.8
+    },
+    "contaminants": [
+      {
+        "name": "Cd",
+        "kind": "metal",
+        "molar_mass": 112.41,
+        "limit_ug_L": 10,
+        "bed": "cation",
+        "affinity": 3,
+        "particulate_frac": 0.1,
+        "uptake_frac": 0.02
+      },
+      {
+        "name": "Ni",
+        "kind": "metal",
+        "molar_mass": 58.69,
+        "limit_ug_L": 200,
+        "bed": "cation",
+        "affinity": 1,
+        "particulate_frac": 0.1,
+        "uptake_frac": 0.01
+      },
+      {
+        "name": "Pb",
+        "kind": "metal",
+        "molar_mass": 207.2,
+        "limit_ug_L": 50,
+        "bed": "cation",
+        "affinity": 10,
+        "particulate_frac": 0.4,
+        "uptake_frac": 0.005
+      },
+      {
+        "name": "As",
+        "kind": "metal",
+        "molar_mass": 74.92,
+        "limit_ug_L": 50,
+        "bed": "arsenic",
+        "affinity": 1,
+        "particulate_frac": 0.05,
+        "uptake_frac": 0.02
+      },
+      {
+        "name": "PFAS_long",
+        "kind": "pfas",
+        "limit_ug_L": 0.1,
+        "bed": "pfas",
+        "affinity": 10,
+        "particulate_frac": 0.0,
+        "uptake_frac": 0.01
+      },
+      {
+        "name": "PFAS_short",
+        "kind": "pfas",
+        "limit_ug_L": 0.1,
+        "bed": "pfas",
+        "affinity": 1,
+        "particulate_frac": 0.0,
+        "uptake_frac": 0.05
+      }
+    ],
+    "treatment": {
+      "e_pump_kwh_m3": 0.4,
+      "e_treat_kwh_m3": 0.5,
+      "prefilter": {
+        "tss_removal": 0.9,
+        "capacity_kg": 0.5,
+        "backwash_kwh": 0.5
+      },
+      "beds": {
+        "cation": {
+          "basis": "molar",
+          "q_tot": 300.0,
+          "mass_kg": 1.2,
+          "K": 20.0,
+          "media_eur_kg": 4.0,
+          "disposal_eur_kg": 1.0,
+          "labour_eur": 120
+        },
+        "arsenic": {
+          "basis": "molar",
+          "q_tot": 60.0,
+          "mass_kg": 1.6,
+          "K": 20.0,
+          "media_eur_kg": 8.0,
+          "disposal_eur_kg": 2.0,
+          "labour_eur": 120
+        },
+        "pfas": {
+          "basis": "mass",
+          "q_tot": 400.0,
+          "mass_kg": 0.5,
+          "K": 20.0,
+          "media_eur_kg": 6.0,
+          "disposal_eur_kg": 3.0,
+          "labour_eur": 120
+        }
+      }
+    },
+    "sensors": {
+      "sd_frac": 0.05,
+      "cusum_k": 0.5,
+      "cusum_h": 8.0,
+      "hold_h": 72,
+      "guard_ratio": 3.0,
+      "guard_min_hi": 0.5,
+      "guard_ewma": 0.002,
+      "guard_hold_h": 6,
+      "pfas_lab_interval_h": 168,
+      "pfas_lab_delay_h": 72,
+      "pfas_lab_sigma": 0.15,
+      "pfas_trigger_frac": 0.3
+    },
+    "policy_defaults": {
+      "replace_interval_days": 120
+    },
+    "costs": {
+      "elec_eur_kwh": 0.15,
+      "freshwater_eur_m3": 1.5,
+      "grid_kg_co2_kwh": 0.3
+    },
+    "scenarios": {
+      "S1": {
+        "tss": 15,
+        "base": {
+          "Cd": 0.5,
+          "Ni": 5,
+          "Pb": 2,
+          "As": 2,
+          "PFAS_long": 0.005,
+          "PFAS_short": 0.01
+        },
+        "events": {
+          "rate_per_year": 0
+        }
+      },
+      "S2": {
+        "tss": 15,
+        "base": {
+          "Cd": 0.5,
+          "Ni": 5,
+          "Pb": 2,
+          "As": 2,
+          "PFAS_long": 0.005,
+          "PFAS_short": 0.01
+        },
+        "events": {
+          "rate_per_year": 4,
+          "pool": [
+            "Cd",
+            "Ni",
+            "Pb",
+            "As"
+          ],
+          "n_affected": [
+            1,
+            2
+          ],
+          "mult_median": 30,
+          "mult_sigma": 0.6,
+          "dur_median_h": 12,
+          "dur_sigma": 0.5,
+          "tss_mult": 3
+        }
+      },
+      "S3": {
+        "tss": 25,
+        "base": {
+          "Cd": 5,
+          "Ni": 30,
+          "Pb": 10,
+          "As": 20,
+          "PFAS_long": 0.005,
+          "PFAS_short": 0.01
+        },
+        "events": {
+          "rate_per_year": 2,
+          "pool": [
+            "Cd",
+            "Ni",
+            "Pb",
+            "As"
+          ],
+          "n_affected": [
+            1,
+            2
+          ],
+          "mult_median": 3,
+          "mult_sigma": 0.4,
+          "dur_median_h": 24,
+          "dur_sigma": 0.5,
+          "tss_mult": 2
+        }
+      },
+      "S4": {
+        "tss": 15,
+        "base": {
+          "Cd": 0.5,
+          "Ni": 5,
+          "Pb": 2,
+          "As": 2,
+          "PFAS_long": 0.05,
+          "PFAS_short": 0.1
+        },
+        "events": {
+          "rate_per_year": 0
+        }
+      }
+    },
+    "default_policy": {
+      "replacement": "sensor",
+      "guard": true
+    },
+    "experiments": {
+      "baseline": {
+        "scenario": "S3"
+      },
+      "bleed_tradeoff": {
+        "scenario": "S3",
+        "ratios": [
+          0.05,
+          0.1,
+          0.15,
+          0.25,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "replicates": 10
+      },
+      "policy_comparison": {
+        "scenarios": [
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "replicates": 10
+      },
+      "detector": {
+        "k": 0.5,
+        "h_values": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "shifts": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "reps": 2000,
+        "t_max": 12000
+      },
+      "sensitivity": {
+        "scenario": "S3",
+        "horizon_days": 120,
+        "N": 32,
+        "parameters": [
+          {
+            "name": "cation_q_tot",
+            "path": "treatment.beds.cation.q_tot",
+            "low": 100,
+            "high": 600
+          },
+          {
+            "name": "cation_mass_kg",
+            "path": "treatment.beds.cation.mass_kg",
+            "low": 0.6,
+            "high": 2.4
+          },
+          {
+            "name": "breakthrough_K",
+            "path": "treatment.beds.cation.K",
+            "low": 6,
+            "high": 40
+          },
+          {
+            "name": "bleed_ratio",
+            "path": "loop.bleed_ratio",
+            "low": 0.05,
+            "high": 0.6
+          },
+          {
+            "name": "source_scale",
+            "path": "scenarios.S3.scale",
+            "low": 0.3,
+            "high": 3.0
+          },
+          {
+            "name": "event_rate",
+            "path": "scenarios.S3.events.rate_per_year",
+            "low": 0,
+            "high": 10
+          },
+          {
+            "name": "sensor_sd_frac",
+            "path": "sensors.sd_frac",
+            "low": 0.02,
+            "high": 0.15
+          },
+          {
+            "name": "arsenic_q_tot",
+            "path": "treatment.beds.arsenic.q_tot",
+            "low": 20,
+            "high": 120
+          }
+        ]
+      },
+      "pfas_robustness": {
+        "draws": 24,
+        "seeds": 2,
+        "days": 240,
+        "ranges": {
+          "pfas_q_tot": [
+            50,
+            1500
+          ],
+          "pfas_affinity_ratio": [
+            2,
+            30
+          ],
+          "lab_interval_h": [
+            48,
+            720
+          ],
+          "lab_delay_h": [
+            24,
+            240
+          ]
+        }
+      }
+    }
+  },
+  "timings_s": {
+    "policies": 101.8,
+    "detector": 1.1,
+    "sensitivity": 71.3,
+    "pfas": 51.4
+  },
+  "total_s": 225.5,
+  "python": "3.12.3",
+  "platform": "Linux-6.18.44-fc-v77-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.2",
+    "SALib": "unknown"
+  }
+}

@@ -1,0 +1,129 @@
+key,value,status,note
+contaminants.Cd.molar_mass,112.41,standard value,atomic mass; PFAS classes are lumped (mass basis)
+contaminants.Cd.limit_ug_L,10.0,to verify,FAO-style irrigation guideline (0.01 mg/L) as cited in secondary sources; verify jurisdiction
+contaminants.Cd.affinity,3.0,illustrative,relative affinity within the bed (higher = breaks through later); ranking illustrative
+contaminants.Cd.particulate_frac,0.1,illustrative,set in configs/default.yaml
+contaminants.Cd.uptake_frac,0.02,illustrative,set in configs/default.yaml
+contaminants.Ni.molar_mass,58.69,standard value,atomic mass; PFAS classes are lumped (mass basis)
+contaminants.Ni.limit_ug_L,200.0,to verify,FAO-style irrigation guideline (0.2 mg/L) as cited in secondary sources; verify jurisdiction
+contaminants.Ni.affinity,1.0,illustrative,relative affinity within the bed (higher = breaks through later); ranking illustrative
+contaminants.Ni.particulate_frac,0.1,illustrative,set in configs/default.yaml
+contaminants.Ni.uptake_frac,0.01,illustrative,set in configs/default.yaml
+contaminants.Pb.molar_mass,207.2,standard value,atomic mass; PFAS classes are lumped (mass basis)
+contaminants.Pb.limit_ug_L,50.0,to verify,conservative placeholder; guideline values vary widely by jurisdiction; verify
+contaminants.Pb.affinity,10.0,illustrative,relative affinity within the bed (higher = breaks through later); ranking illustrative
+contaminants.Pb.particulate_frac,0.4,illustrative,set in configs/default.yaml
+contaminants.Pb.uptake_frac,0.005,illustrative,set in configs/default.yaml
+contaminants.As.molar_mass,74.92,standard value,atomic mass; PFAS classes are lumped (mass basis)
+contaminants.As.limit_ug_L,50.0,to verify,conservative placeholder; guideline values vary by jurisdiction; verify
+contaminants.As.affinity,1.0,illustrative,relative affinity within the bed (higher = breaks through later); ranking illustrative
+contaminants.As.particulate_frac,0.05,illustrative,set in configs/default.yaml
+contaminants.As.uptake_frac,0.02,illustrative,set in configs/default.yaml
+contaminants.PFAS_long.limit_ug_L,0.1,to verify,exploratory placeholder; no harmonised irrigation limit assumed; verify
+contaminants.PFAS_long.affinity,10.0,illustrative,relative affinity within the bed (higher = breaks through later); ranking illustrative
+contaminants.PFAS_long.particulate_frac,0.0,illustrative,set in configs/default.yaml
+contaminants.PFAS_long.uptake_frac,0.01,illustrative,set in configs/default.yaml
+contaminants.PFAS_short.limit_ug_L,0.1,to verify,exploratory placeholder; no harmonised irrigation limit assumed; verify
+contaminants.PFAS_short.affinity,1.0,illustrative,relative affinity within the bed (higher = breaks through later); ranking illustrative
+contaminants.PFAS_short.particulate_frac,0.0,illustrative,set in configs/default.yaml
+contaminants.PFAS_short.uptake_frac,0.05,illustrative,set in configs/default.yaml
+site.latitude,52.0,illustrative,illustrative; calibrate to your system
+site.transmissivity,0.65,illustrative,illustrative; calibrate to your system
+site.t_min_inside,16.0,illustrative,illustrative; calibrate to your system
+site.t_max_inside,27.0,illustrative,illustrative; calibrate to your system
+site.rh_inside,0.75,illustrative,illustrative; calibrate to your system
+crop.area_m2,2000.0,illustrative,illustrative; calibrate to your system
+crop.f_rad,0.6,illustrative,illustrative; calibrate to your system
+crop.c_vpd,0.05,illustrative,illustrative; calibrate to your system
+crop.crop_min,0.3,illustrative,illustrative; calibrate to your system
+crop.ramp_days,90.0,illustrative,illustrative; calibrate to your system
+crop.end_doy,300.0,illustrative,illustrative; calibrate to your system
+crop.crop_final,0.5,illustrative,illustrative; calibrate to your system
+loop.volume_m3,30.0,illustrative,illustrative; calibrate to your system
+loop.bleed_ratio,0.25,illustrative,illustrative; calibrate to your system
+tank.max_m3,40.0,illustrative,illustrative; calibrate to your system
+tank.start_frac,0.5,illustrative,illustrative; calibrate to your system
+tank.intake_on_frac,0.8,illustrative,illustrative; calibrate to your system
+tank.q_src_max,0.6,illustrative,illustrative; calibrate to your system
+tank.q_cap,0.8,illustrative,illustrative; calibrate to your system
+treatment.e_pump_kwh_m3,0.4,illustrative,illustrative; calibrate to your system
+treatment.e_treat_kwh_m3,0.5,illustrative,illustrative; calibrate to your system
+treatment.prefilter.tss_removal,0.9,illustrative,illustrative; calibrate to your system
+treatment.prefilter.capacity_kg,0.5,illustrative,illustrative; calibrate to your system
+treatment.prefilter.backwash_kwh,0.5,illustrative,illustrative; calibrate to your system
+treatment.beds.cation.q_tot,300.0,illustrative,illustrative; calibrate to your system
+treatment.beds.cation.mass_kg,1.2,illustrative,illustrative; calibrate to your system
+treatment.beds.cation.K,20.0,illustrative,illustrative; calibrate to your system
+treatment.beds.cation.media_eur_kg,4.0,illustrative,illustrative; calibrate to your system
+treatment.beds.cation.disposal_eur_kg,1.0,illustrative,illustrative; calibrate to your system
+treatment.beds.cation.labour_eur,120.0,illustrative,illustrative; calibrate to your system
+treatment.beds.arsenic.q_tot,60.0,illustrative,illustrative; calibrate to your system
+treatment.beds.arsenic.mass_kg,1.6,illustrative,illustrative; calibrate to your system
+treatment.beds.arsenic.K,20.0,illustrative,illustrative; calibrate to your system
+treatment.beds.arsenic.media_eur_kg,8.0,illustrative,illustrative; calibrate to your system
+treatment.beds.arsenic.disposal_eur_kg,2.0,illustrative,illustrative; calibrate to your system
+treatment.beds.arsenic.labour_eur,120.0,illustrative,illustrative; calibrate to your system
+treatment.beds.pfas.q_tot,400.0,illustrative,illustrative; calibrate to your system
+treatment.beds.pfas.mass_kg,0.5,illustrative,illustrative; calibrate to your system
+treatment.beds.pfas.K,20.0,illustrative,illustrative; calibrate to your system
+treatment.beds.pfas.media_eur_kg,6.0,illustrative,illustrative; calibrate to your system
+treatment.beds.pfas.disposal_eur_kg,3.0,illustrative,illustrative; calibrate to your system
+treatment.beds.pfas.labour_eur,120.0,illustrative,illustrative; calibrate to your system
+sensors.sd_frac,0.05,illustrative,assumption
+sensors.cusum_k,0.5,illustrative,assumption
+sensors.cusum_h,8.0,illustrative,assumption
+sensors.hold_h,72.0,illustrative,assumption
+sensors.guard_ratio,3.0,illustrative,assumption
+sensors.guard_min_hi,0.5,illustrative,assumption
+sensors.guard_ewma,0.002,illustrative,assumption
+sensors.guard_hold_h,6.0,illustrative,assumption
+sensors.pfas_lab_interval_h,168.0,illustrative,assumption
+sensors.pfas_lab_delay_h,72.0,illustrative,assumption
+sensors.pfas_lab_sigma,0.15,illustrative,assumption
+sensors.pfas_trigger_frac,0.3,illustrative,assumption
+costs.elec_eur_kwh,0.15,illustrative,illustrative; calibrate to your system
+costs.freshwater_eur_m3,1.5,illustrative,illustrative; calibrate to your system
+costs.grid_kg_co2_kwh,0.3,illustrative,illustrative; calibrate to your system
+policy_defaults.replace_interval_days,120.0,illustrative,assumption
+scenarios.S1.tss,15.0,scenario assumption,illustrative
+scenarios.S1.base.Cd,0.5,scenario assumption,illustrative
+scenarios.S1.base.Ni,5.0,scenario assumption,illustrative
+scenarios.S1.base.Pb,2.0,scenario assumption,illustrative
+scenarios.S1.base.As,2.0,scenario assumption,illustrative
+scenarios.S1.base.PFAS_long,0.005,scenario assumption,illustrative
+scenarios.S1.base.PFAS_short,0.01,scenario assumption,illustrative
+scenarios.S1.events.rate_per_year,0.0,scenario assumption,illustrative
+scenarios.S2.tss,15.0,scenario assumption,illustrative
+scenarios.S2.base.Cd,0.5,scenario assumption,illustrative
+scenarios.S2.base.Ni,5.0,scenario assumption,illustrative
+scenarios.S2.base.Pb,2.0,scenario assumption,illustrative
+scenarios.S2.base.As,2.0,scenario assumption,illustrative
+scenarios.S2.base.PFAS_long,0.005,scenario assumption,illustrative
+scenarios.S2.base.PFAS_short,0.01,scenario assumption,illustrative
+scenarios.S2.events.rate_per_year,4.0,scenario assumption,illustrative
+scenarios.S2.events.mult_median,30.0,scenario assumption,illustrative
+scenarios.S2.events.mult_sigma,0.6,scenario assumption,illustrative
+scenarios.S2.events.dur_median_h,12.0,scenario assumption,illustrative
+scenarios.S2.events.dur_sigma,0.5,scenario assumption,illustrative
+scenarios.S2.events.tss_mult,3.0,scenario assumption,illustrative
+scenarios.S3.tss,25.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.base.Cd,5.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.base.Ni,30.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.base.Pb,10.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.base.As,20.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.base.PFAS_long,0.005,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.base.PFAS_short,0.01,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.events.rate_per_year,2.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.events.mult_median,3.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.events.mult_sigma,0.4,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.events.dur_median_h,24.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.events.dur_sigma,0.5,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S3.events.tss_mult,2.0,scenario assumption,S3 values are PLACEHOLDERS: replace with ranges from your own measurements
+scenarios.S4.tss,15.0,scenario assumption,exploratory
+scenarios.S4.base.Cd,0.5,scenario assumption,exploratory
+scenarios.S4.base.Ni,5.0,scenario assumption,exploratory
+scenarios.S4.base.Pb,2.0,scenario assumption,exploratory
+scenarios.S4.base.As,2.0,scenario assumption,exploratory
+scenarios.S4.base.PFAS_long,0.05,scenario assumption,exploratory
+scenarios.S4.base.PFAS_short,0.1,scenario assumption,exploratory
+scenarios.S4.events.rate_per_year,0.0,scenario assumption,exploratory

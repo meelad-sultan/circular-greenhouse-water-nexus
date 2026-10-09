@@ -1,0 +1,8 @@
+extends: default.yaml
+horizon_days: 120
+experiments:
+  bleed_tradeoff: {ratios: [0.1, 0.4], replicates: 2}
+  policy_comparison: {scenarios: [S2, S4], replicates: 2}
+  detector: {h_values: [4, 8], shifts: [2], reps: 300, t_max: 4000}
+  sensitivity: {horizon_days: 40, N: 8}
+  pfas_robustness: {draws: 4, seeds: 1, days: 60}

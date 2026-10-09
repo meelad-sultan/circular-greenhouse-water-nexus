@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Data and heavy outputs (rebuilt by scripts; see data/README.md)
+data/raw/
+data/interim/
+data/processed/
+results/runs/
+results/quick/
+
+# Secrets and editor files
+.env
+*.key
+.vscode/
+.idea/
+.DS_Store
+results/quick/
+validation/outputs/

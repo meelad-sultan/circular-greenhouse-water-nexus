@@ -1,0 +1,35 @@
+{
+  "scenario": "S3",
+  "none": {
+    "exposure_h": 4911.0,
+    "exposure_frac": 0.5606164383561644,
+    "max_hi": 12.819951420632387,
+    "mean_hi": 4.687574686082383,
+    "bed_breakthrough_h": 4028.0,
+    "freshwater_m3": 0.0,
+    "reuse_frac": 1.0,
+    "replacements": 0.0,
+    "premature_replacements": 0.0,
+    "guard_block_h": 0.0,
+    "energy_kwh_per_m3_reused": 0.9216844232652314,
+    "co2_kg": 408.70688802576,
+    "cost_eur": 204.35344401288,
+    "mass_balance_rel_err": 9.59834101306604e-16
+  },
+  "sensor + guard": {
+    "exposure_h": 0.0,
+    "exposure_frac": 0.0,
+    "max_hi": 0.09359105924700269,
+    "mean_hi": 0.02916056228006495,
+    "bed_breakthrough_h": 0.0,
+    "freshwater_m3": 0.0,
+    "reuse_frac": 1.0,
+    "replacements": 7.0,
+    "premature_replacements": 1.0,
+    "guard_block_h": 0.0,
+    "energy_kwh_per_m3_reused": 0.9216844232652314,
+    "co2_kg": 408.70688802576,
+    "cost_eur": 1126.3534440128801,
+    "mass_balance_rel_err": 2.5064149608496343e-15
+  }
+}

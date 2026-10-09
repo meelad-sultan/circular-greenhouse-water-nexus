@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "circular-greenhouse-water-nexus: multi-contaminant treatment and reuse in a circular greenhouse"
+type: software
+authors:
+  - family-names: "Sultan"
+    given-names: "Muhammad Meelad"
+version: "0.1.0"
+date-released: "2026-10-08"
+license: MIT
+repository-code: "https://github.com/meelad-sultan/circular-greenhouse-water-nexus"
+keywords: [wastewater reuse, adsorption, breakthrough curve, heavy metals, PFAS, greenhouse, sensitivity analysis]

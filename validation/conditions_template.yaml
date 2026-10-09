@@ -1,0 +1,6 @@
+# Fill in from the paper's methods section. Keep the citation.
+c0_mg_per_L: 0.0          # inlet concentration
+flow_mL_per_min: 0.0      # volumetric flow rate
+bed_mass_g: 0.0           # mass of adsorbent in the column
+time_unit: min            # unit of the digitised time axis: min | h
+source: "Author(s) (year). Title. Journal volume(issue), pages. DOI"
