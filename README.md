@@ -442,9 +442,7 @@ flowchart TD
 
 ## 18. Citation, licence, references
 
-**Cite as** (see `CITATION.cff`): Sultan, M. M. (2026). *circular-greenhouse-water-nexus: multi-contaminant treatment and reuse in a
-circular greenhouse* (v0.1.0). Add the Zenodo DOI after the first release.
-
+**Cite as** (see `CITATION.cff`): Sultan, M. M. (2026). *circular-greenhouse-water-nexus: multi-contaminant treatment and reuse in a circular greenhouse* (v0.1.0). GitHub repository.
 **Licence:** MIT (see `LICENSE`).
 
 **Author:** Muhammad Meelad Sultan · GitHub: [@meelad-sultan](https://github.com/meelad-sultan) · 
